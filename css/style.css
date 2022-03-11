@@ -8,33 +8,18 @@
 
 body {
     background: #edf2f8;
-    font-family: 'Barlow Semi Condensed',
-    sans-serif;
+    font-family: 'Barlow Semi Condensed', sans-serif;
     line-height: 1.7;
     font-size: 13px;
 }
 
 .testimonials {
-    max-width: 1400px;
+    max-width: 1440px;
     margin: 100px auto;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-}
-
-.card:nth-of-type(1) {
-    grid-column: 1 / 3;
-}
-
-.card:nth-of-type(4) {
-    grid-column: 2 / 4;
-    grid-row: 2;
-}
-
-.card:nth-of-type(5) {
-    grid-column: 4;
-    grid-row: 1 / 3;
 }
 
 .card {
@@ -99,6 +84,37 @@ body {
     color: #fff;
 }
 
+.card:nth-of-type(1) {
+    grid-column: 1 / 3;
+}
+
+.card:nth-of-type(4) {
+    grid-column: 2 / 4;
+    grid-row: 2;
+}
+
+.card:nth-of-type(5) {
+    grid-column: 4;
+    grid-row: 1 / 3;
+}
+
 footer {
     text-align: center;
 }
+
+@media (max-width: 768px) {	
+    .testimonials {	
+      grid-template-columns: 1fr;	
+      width: 100%;	
+    }	
+    .card:nth-of-type(1) {	
+      grid-column: 1;	
+    }	
+    .card:nth-of-type(4) {	
+      grid-column: 1;	
+      grid-row: 4;	
+    }	
+    .card:nth-of-type(5) {	
+      grid-column: 1;	
+      grid-row: 5;	
+    }
